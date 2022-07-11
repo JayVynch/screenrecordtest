@@ -1,6 +1,5 @@
 const path = require('path');
 var webpack = require('webpack');
-import { Multicorder } from 'multicorder';
 
 module.exports = {
     resolve: {
@@ -9,7 +8,6 @@ module.exports = {
             videojs : 'video.js',
             WaveSurfer : 'wavesurfer.js',
             RecordRTC : 'recordrtc',
-            Camera : 'multicorder'
         },
     },
     plugins: [
