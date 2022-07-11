@@ -3,6 +3,9 @@ require('./bootstrap');
 import {createApp, h} from 'vue';
 import { App, plugin } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress'
+import { Camera, Microphone } from 'vue-capture'
+import { Multicorder } from 'multicorder';
+
 
 const el = document.getElementById('app');
 

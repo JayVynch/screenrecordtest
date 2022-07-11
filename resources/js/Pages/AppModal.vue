@@ -16,6 +16,7 @@
               	</button>
             </div>
             <div class="w-full">
+
               	<div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
 	                <DialogTitle as="h3" class="text-lg leading-6 font-bold text-gray-900">
 	                  	New Recording
@@ -32,6 +33,7 @@
 										      	<option class="text-gray-300" selected="">Select a project</option>
 										    </select>
 										</div>
+
 							          	<div class="sm:col-span-2">
 								            <div class="flex justify-between">
 								              	
@@ -118,6 +120,8 @@
 
 	  	setup(props,context) {
 
+	  		const pics = ref("")
+
 	    	const cam = ref(false)
 
 	    	const mic = ref(false)
@@ -125,29 +129,8 @@
 	    	const vid = ref(false)
 
 	    	const checkMic = async () => {
-			  	const micPermissionStatus = await navigator.permissions.query({
-			    	name: 'microphone'
-			  	})
-
-			  	const vidPermissionStatus = await navigator.permissions.query({
-			    	name: 'camera'
-			  	})
-
 			  	if (cam.value == true || vid.value == true || mic.value == true) {
-			  		if ((vidPermissionStatus.state != 'granted' && micPermissionStatus.state != 'granted') || (vidPermissionStatus.state != 'granted' && micPermissionStatus.state == 'granted') || (vidPermissionStatus.state == 'granted' && micPermissionStatus.state != 'granted')) 
-			  		{
-				  		navigator.mediaDevices.getUserMedia({video: true, audio: true})
-					    .then( stream => {
-					        window.localStream = stream;
-					        window.localAudio.srcObject = stream;
-					        window.localAudio.autoplay = true;
-					        context.emit("viewScreen", true)
-					    }).catch( err => {
-					        console.log("u got an error:" + err)
-					    });
-				  	}else{
-				  		context.emit("viewScreen", true)
-				  	}
+			  		context.emit("viewScreen", true)
 				}else{
 					alert("choose an option")
 				}
@@ -157,7 +140,8 @@
 	      		cam,
 	      		mic,
 	      		vid,
-	      		checkMic
+	      		checkMic,
+	      		pics
 	    	}
 	  	},
 	}

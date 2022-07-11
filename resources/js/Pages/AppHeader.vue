@@ -88,7 +88,11 @@
             ChevronRightIcon,
             AppModal
         },
-        setup(){
+
+        emits : ['viewScreenTrigger'],
+        setup(props, context ){
+
+            context.emit("viewScreenTrigger",true)
             return {
                 recording,
                 screenToggle,

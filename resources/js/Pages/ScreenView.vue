@@ -10,8 +10,8 @@
 		          <div class="h-full py-6 px-4 sm:px-6 lg:px-8">
 		            <!-- Start main area-->
 		            <div class="relative h-full" style="min-height: 36rem;">
-		              	<AppHeader />
-		              	<Screen />
+		              	<AppHeader @viewScreenTrigger="openScreen" />
+		              	<Screen  :startRecorder="viewShow" />
 		            </div>
 		            <!-- End main area -->
 		          </div>
@@ -29,6 +29,13 @@
 	import SideBar from './SideBar.vue'
 	import AppHeader from './AppHeader.vue'
 	import Screen from './Screen'
+	import { ref } from 'vue'
+
+	const viewShow = ref(false)
+
+	function openScreen(value){
+		viewShow.value = value 
+	}
 
 	export default {
 	  	components: {
@@ -56,7 +63,12 @@
 	  	},
 
 	  	setup() {
+
+	  		
+
 		    return {
+		    	openScreen,
+		    	viewShow
 		    }
 	  	},
 	}

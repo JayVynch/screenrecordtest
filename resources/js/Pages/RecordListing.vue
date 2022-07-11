@@ -69,7 +69,7 @@
 	export default {
 
 		components: {
-			DotsHorizontalIcon
+			DotsHorizontalIcon,
 		},
 		
 	  	setup() {
