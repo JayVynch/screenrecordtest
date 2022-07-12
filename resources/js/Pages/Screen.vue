@@ -62,7 +62,7 @@
 	                    pipToggle: false
 	                },
 	                width: 500,
-	                height: 300,
+	                height: 250,
 	                fluid: true,
 	                plugins: {
 	                    record: {

@@ -38,6 +38,7 @@
         "vue-capture": "^0.1.7",
         "vue-loader": "^16.2.0",
         "vue-media-recorder": "^0.1.25",
+        "vue-router": "^4.0.13",
         "vue-web-cam": "^1.9.0"
     }
 }

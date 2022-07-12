@@ -4,7 +4,7 @@
 		    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		      <div class="flex justify-between h-16">
 		        <div class="flex">
-		          	<Link :href="$route('home')" class="flex-shrink-0 flex items-center">
+		          	<Link :href="route('home')" class="flex-shrink-0 flex items-center">
 			            <div class="w-8 h-8 bg-orange-500 rounded-md flex justify-center items-center">
 			            	<div class="w-5 h-5 rounded-full bg-white"></div>
 			            </div>
@@ -20,7 +20,7 @@
 				              	<transition enter-active-class="transition ease-out duration-200" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
 					              	<MenuItems class="origin-top-right absolute mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" style="top:3rem;">
 						                <MenuItem v-slot="{ active }">
-						                  	<Link :href="$route('record.list')" :class="[active ? 'bg-sky-100' : '', 'block px-4 py-2 text-sm text-gray-700 hover:bg-white hover:text-sky-700']">Snapbyte Recorder</Link>
+						                  	<Link :href="route('record.list')" :class="[active ? 'bg-sky-100' : '', 'block px-4 py-2 text-sm text-gray-700 hover:bg-white hover:text-sky-700']">Snapbyte Recorder</Link>
 						                </MenuItem>
 						                <MenuItem v-slot="{ active }">
 						                  <a href="#" :class="[active ? 'bg-sky-100' : '', 'block px-4 py-2 text-sm hover:bg-white border-t-2 border-gray-300 text-gray-700 hover:text-sky-700']">AudioBounce</a>

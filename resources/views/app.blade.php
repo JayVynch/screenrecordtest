@@ -16,7 +16,7 @@
         <!-- Scripts -->
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/vue-capture/dist/vue-capture.umd.min.js"></script>
+        
     </head>
     <body class="font-sans antialiased">
         @inertia
