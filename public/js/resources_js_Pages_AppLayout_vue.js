@@ -17,6 +17,27 @@ function render(_ctx, _cache) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/dist/exportHelper.js":
+/*!******************************************************!*\
+  !*** ./node_modules/vue-loader/dist/exportHelper.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+// runtime helper for setting properties on components
+// in a tree-shakable way
+exports["default"] = (sfc, props) => {
+    const target = sfc.__vccOpts || sfc;
+    for (const [key, val] of props) {
+        target[key] = val;
+    }
+    return target;
+};
+
+
+/***/ }),
+
 /***/ "./resources/js/Pages/AppLayout.vue":
 /*!******************************************!*\
   !*** ./resources/js/Pages/AppLayout.vue ***!

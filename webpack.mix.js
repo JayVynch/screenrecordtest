@@ -18,5 +18,5 @@ mix.js('resources/js/app.js', 'public/js')
         require('autoprefixer'),
         require('tailwindcss'),
     ])
-    .webpackConfig(require('./webpack.config'))
-    .extract();
+    .webpackConfig(require('./webpack.config'));
+    // .extract();

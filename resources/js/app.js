@@ -1,9 +1,8 @@
 require('./bootstrap');
 
 import {createApp, h} from 'vue';
-import { createInertiaApp,Head, Link } from '@inertiajs/inertia-vue3'
+import { createInertiaApp, Head, Link } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress'
-
 
 import { ZiggyVue } from "ziggy";
 import { Ziggy } from '@/ziggy'
@@ -19,8 +18,8 @@ createInertiaApp({
         createApp({ render: () => h(App, props) })
             .use(plugin)
             .use(ZiggyVue, Ziggy)
-            // .component("Link", Link)
-            // .component("Head", Head)
+            .component("Link", Link)
+            .component("Head", Head)
             .mixin({ methods: { route } })
             .mount(el);
     },
@@ -29,7 +28,7 @@ createInertiaApp({
 
 // const el = document.getElementById('app');
 
-
+// InertiaProgress.init();
 // const app = createApp({
 //     render: () => h(App, {
 //         initialPage: JSON.parse(el.dataset.page),

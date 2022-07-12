@@ -122,6 +122,5 @@
 	            this.player.dispose();
 	        }
 	    }
-	}
-	
+	}	
 </script>
