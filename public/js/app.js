@@ -20505,17 +20505,7 @@ _inertiajs_progress__WEBPACK_IMPORTED_MODULE_2__.InertiaProgress.init();
       }
     }).mount(el);
   }
-}); // const el = document.getElementById('app');
-// InertiaProgress.init();
-// const app = createApp({
-//     render: () => h(App, {
-//         initialPage: JSON.parse(el.dataset.page),
-//         resolveComponent: name => require(`./Pages/${name}`).default
-//     })
-// });
-// app.config.globalProperties.$route = window.route;
-// app.provide('$route', window.route);
-// app.use(plugin).mount(el);
+});
 
 /***/ }),
 
@@ -44712,7 +44702,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_AppHeader_vue":"95e6eb84d325f938","resources_js_Pages_AppLayout_vue":"c48c92eb702d2c0a","resources_js_Pages_AppModal_vue":"44614650b88499e2","resources_js_Pages_Home_vue":"b3b85d4a2bf9ca39","resources_js_Pages_NavBar_vue":"7afcf927abb9e3e3","resources_js_Pages_RecordList_vue":"32a17019ea8ac79e","resources_js_Pages_RecordListing_vue":"9f70b1fbbe2a3760","resources_js_Pages_Screen_vue":"84081af2d56b057b","resources_js_Pages_ScreenView_vue":"b71cc9b606f5c4af","resources_js_Pages_SideBar_vue":"cd9bd023721051b6","resources_js_Pages_Welcome_vue":"a15d06cd61eb9044","resources_js_Pages_screensavedpage_vue":"375206766e777c4e"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_AppHeader_vue":"8d8523386a8066e6","resources_js_Pages_AppLayout_vue":"c48c92eb702d2c0a","resources_js_Pages_AppModal_vue":"4749908dc1270d20","resources_js_Pages_Home_vue":"fb328edd27baf874","resources_js_Pages_NavBar_vue":"7afcf927abb9e3e3","resources_js_Pages_RecordList_vue":"b7441070ca5a4a11","resources_js_Pages_RecordListing_vue":"9f70b1fbbe2a3760","resources_js_Pages_Screen_vue":"9dc2d144edd5ee74","resources_js_Pages_ScreenView_vue":"ff7cbf13d95105c2","resources_js_Pages_SideBar_vue":"cd9bd023721051b6","resources_js_Pages_Welcome_vue":"a4f2348e2ae9deb3","resources_js_Pages_screensavedpage_vue":"375206766e777c4e"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

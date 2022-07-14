@@ -118,31 +118,27 @@
 
 	  	emits : ['viewScreen'],
 
-	  	setup(props,context) {
+	  	data(){
+	  		return{
 
-	  		const pics = ref("")
+	  			pics : "",
+	    	
+	    		cam : false,
+	    	
+	    		mic : false,
 
-	    	const cam = ref(false)
+	    		vid : false,
+	    	}
+	  	},
 
-	    	const mic = ref(false)
-
-	    	const vid = ref(false)
-
-	    	const checkMic = async () => {
-			  	if (cam.value == true || vid.value == true || mic.value == true) {
-			  		context.emit("viewScreen", true)
+	  	methods: {
+	  		checkMic() {
+			  	if (this.cam == true || this.vid == true || this.mic == true) {
+			  		this.$emit("viewScreen", true)
 				}else{
 					alert("choose an option")
 				}
 			}
-
-	    	return {
-	      		cam,
-	      		mic,
-	      		vid,
-	      		checkMic,
-	      		pics
-	    	}
-	  	},
+	  	}
 	}
 </script>

@@ -32,9 +32,6 @@
 </template>
 
 <script>
-	import { Menu, MenuButton, MenuItem, MenuItems, Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
-	import { SearchIcon } from '@heroicons/vue/solid'
-	import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 	import NavBar from './NavBar.vue'
 	import SideBar from './SideBar.vue'
 	import AppHeader from './AppHeader.vue'
@@ -43,17 +40,6 @@
 
 	export default {
 	  	components: {
-		    Menu,
-		    MenuButton,
-		    MenuItem,
-		    MenuItems,
-		    Popover,
-		    PopoverButton,
-		    PopoverPanel,
-		    BellIcon,
-		    MenuIcon,
-		    SearchIcon,
-		    XIcon,
 		    NavBar,
 		    SideBar,
 		    AppHeader,

@@ -45,7 +45,7 @@
 </template>
 
 <script>
-    import { ref, watch } from 'vue'
+    import { ref, watch, defineComponent } from 'vue'
     import { 
         FilterIcon,
         StopIcon, 
@@ -58,26 +58,7 @@
 
     import AppModal from './AppModal'
 
-    const recording = {
-        title: 'My Recording',
-        records : '25'
-    }
-
-    const screenToggle = ref(false)
-
-    function changeToggleState(){
-        
-        return screenToggle.value = ! screenToggle.value
-    }
-
-    function goto(unlock)
-    {
-        if(unlock == true){
-            window.location.href = "/records/screens/1";
-        }
-    }
-
-    export default {
+    export default defineComponent({
         components: {
             FilterIcon,
             StopIcon,
@@ -90,15 +71,32 @@
         },
 
         emits : ['viewScreenTrigger'],
-        setup(props, context ){
 
-            context.emit("viewScreenTrigger",true)
+        data(){
             return {
-                recording,
-                screenToggle,
-                goto,
-                changeToggleState,
+                recording : {
+                    title: 'My Recording',
+                    records : '25'
+                },
+
+                screenToggle : false
+            }
+        },
+
+        methods: {
+            changeToggleState(){
+        
+                return this.screenToggle = ! this.screenToggle
+            },
+
+            goto(unlock)
+            {
+                if(unlock == true){
+                    this.$emit("viewScreenTrigger",true)
+                    window.location.href = "/records/screens/1";
+                }
             }
         }
-    }
+    })
+
 </script>
